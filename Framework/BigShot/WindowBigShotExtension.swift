@@ -1,6 +1,16 @@
 import Foundation
 
 extension UIWindow {
+
+    override public func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?)
+    {
+        if (event!.type == .Motion && event!.subtype == .MotionShake) {
+            let image = takeBigShot()
+            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+            showToast("BigShot saved to photos album.")
+        }
+    }
+    
     public func takeBigShot() -> UIImage {
         let originalBounds = bounds
         let scrollViewAsView = getFirstInstance { (view) -> Bool in
