@@ -10,6 +10,10 @@ BigShot is written purely in Swift, its a simple implementation that manipulates
 
     github "https://github.com/tapthaker/BigShot"
 
+### Cocoapods
+
+    pod 'BigShot', '~> 0.1'
+
 ## Usage (•ิ_•ิ)?
 
 **Nothing to do here**, things will work automatically, just shake the iPhone to take screenshot of your app. YAY **＼（＾ ＾）／**.
